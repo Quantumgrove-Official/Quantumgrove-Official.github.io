@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "title": "Quantum Shield AntiVirus",
+      "path": "resources/portfolio/AntiVirus.png",
+      "description": "Android antivirus application focused on malware detection using hash-based scanning techniques. The app compares file signatures against known malicious hashes to identify threats and provides basic device protection features.",
+      "techStack": ["Kotlin", "Hash-Based Detection", "Android Security APIs"]
+    },
+    {
+      "title": "Calosync Health",
+      "path": "resources/portfolio/Calosync.png",
+      "description": "Cross-platform calorie and health tracking application designed to help users lose or gain weight. Features include calorie logging, recipe tracking, progress monitoring, and AI-powered tools such as a chatbot assistant for guidance and food logging.",
+      "techStack": ["Flutter", "Kotlin", "AI Assistance", "Nutrition Tracking"]
+    },
+    {
+      "title": "Children's Story Books",
+      "path": "resources/portfolio/Children Book App.png",
+      "description": "Interactive children’s book application that allows young users to read digital storybooks, color characters, and engage with creative learning activities designed for early childhood development.",
+      "techStack": ["Flutter", "Custom UI", "Interactive Media"]
+    },
+    {
+      "title": "Coin Kids Finance",
+      "path": "resources/portfolio/Coin Kids.png",
+      "description": "Flutter-based financial literacy app for kids, available on both Android and iOS. The app helps children save money toward goals, bookmark desired products using Amazon APIs, and track progress in a fun and educational way.",
+      "techStack": ["Flutter", "Firebase", "Amazon APIs", "Goal Tracking"]
+    },
+    {
+      "title": "Recover Master",
+      "path": "resources/portfolio/Data Recovery.png",
+      "description": "Android data recovery application designed to restore lost files such as photos, videos, and documents from Android devices by scanning storage and identifying recoverable data.",
+      "techStack": ["Kotlin", "Android Storage APIs", "File Recovery Algorithms"]
+    },
+    {
+      "title": "Video Downloader",
+      "path": "resources/portfolio/Downloader.png",
+      "description": "Lightweight and easy-to-use video downloader that enables users to quickly download media content with a simple interface and fast processing.",
+      "techStack": ["Android SDK", "Kotlin", "Networking"]
+    },
+    {
+      "title": "Face Animate AI",
+      "path": "resources/portfolio/Face Animate.png",
+      "description": "Creative entertainment app that animates static images by applying facial motion and dance animations synchronized with music, allowing users to create fun and expressive animated content.",
+      "techStack": ["Python", "Computer Vision", "Animation Processing"]
+    },
+    {
+      "title": "Anti Theft",
+      "path": "resources/portfolio/FG.png",
+      "description": "Android productivity application that helps users stay focused by blocking distractions and tracking app usage to promote better digital wellbeing and time management.",
+      "techStack": ["Kotlin", "Usage Stats API", "WorkManager"]
+    },
+    {
+      "title": "Privify VPN",
+      "path": "resources/portfolio/Privify.png",
+      "description": "Secure file vault application that allows users to protect sensitive files, photos, and documents using strong encryption and authentication mechanisms.",
+      "techStack": ["Encryption", "Biometric Authentication", "Secure Storage"]
+    },
+    {
+      "title": "Privify VPN Lite",
+      "path": "resources/portfolio/Prvify vpn lite.png",
+      "description": "Cross-platform VPN application for Android and iOS built using OpenVPN, focusing on secure and private internet access. Backend infrastructure was managed using DevOps practices for scalability and reliability.",
+      "techStack": ["OpenVPN", "DevOps", "Android", "iOS"]
+    },
+    {
+      "title": "Screen Cast",
+      "path": "resources/portfolio/ScreenCast.jpeg",
+      "description": "Powerful screen casting application for Android that enables users to stream and cast their device screen to various devices such as TVs, web browsers, and media players seamlessly.",
+      "techStack": ["Kotlin", "Cast SDK", "Network Protocols"]
+    },
+    {
+      "title": "Time Warp",
+      "path": "resources/portfolio/Time Warp.png",
+      "description": "Advanced image and video editing application featuring creative tools such as time warp effects, face swapping, background replacement, and sky replacement for visually engaging content creation.",
+      "techStack": ["Video Processing", "Image Manipulation", "Mobile Media SDKs"]
+    }
+  ]
+}

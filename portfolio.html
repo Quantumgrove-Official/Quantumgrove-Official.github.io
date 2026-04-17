@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | QuantumGrove</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0f8a5f",
+                        "accent-secondary": "#0d7a54",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="icon" type="image/svg+xml" href="resources/logo.svg" />
+    <script src="scripts/main.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white transition-colors duration-300 font-sans">
+    
+    <!-- Navbar -->
+    <header id="navbar" class="fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] top-0 w-full border-b border-transparent bg-white/80 dark:bg-[#0b0f1a]/80 backdrop-blur-sm py-5">
+        <div class="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-6 md:px-10 lg:px-12">
+            <a href="index.html" class="flex items-center gap-4 text-primary transition-opacity hover:opacity-80">
+                <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                <h2 class="hidden md:block text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                    QuantumGrove
+                </h2>
+            </a>
+
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-9">
+                    <a href="index.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">Home</a>
+                    <a href="portfolio.html" class="text-sm transition-colors text-primary font-bold">Portfolio</a>
+                    <a href="about.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">About Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html" class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-all hover:bg-opacity-90 active:scale-95 shadow-lg shadow-primary/20">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="mobile-menu-btn" class="p-2 text-[#0d121b] dark:text-white hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined !text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white dark:bg-[#1a202c] border-b border-[#e7ebf3] dark:border-white/5 shadow-xl overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="flex flex-col p-6 gap-6">
+                <nav class="flex flex-col gap-4">
+                    <a href="index.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">Home</a>
+                    <a href="portfolio.html" class="text-lg font-bold text-primary">Portfolio</a>
+                    <a href="about.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">About Us</a>
+                </nav>
+                <hr class="border-gray-100 dark:border-white/5" />
+                <a href="contact.html" class="w-full flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-[100px] flex flex-col bg-background-light dark:bg-background-dark pb-32">
+        <!-- Header Section -->
+        <section class="px-6 lg:px-20 py-20 lg:py-28 relative overflow-hidden text-center">
+            <div class="max-w-[1280px] mx-auto flex flex-col items-center gap-8 relative z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-black uppercase tracking-[0.2em]">
+                    Engineering Portfolio
+                </div>
+                <h1 class="text-5xl lg:text-8xl font-black text-[#0d121b] dark:text-white tracking-tighter leading-none">
+                    Built to <span class="text-primary italic">Perform.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-[#97A699] dark:text-gray-400 max-w-3xl leading-relaxed font-medium">
+                    A comprehensive look at our technical achievements across mobile, web, and infrastructure engineering.
+                </p>
+            </div>
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent -z-0"></div>
+        </section>
+
+        <!-- Projects Feed -->
+        <section class="px-6 lg:px-20">
+            <div class="max-w-[1280px] mx-auto flex flex-col gap-32">
+                
+                <!-- Quantum Shield AntiVirus -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/AntiVirus.png" alt="Quantum Shield AntiVirus" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                        <div class="absolute inset-0 bg-black/20 z-20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Quantum Shield AntiVirus</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Android antivirus application focused on malware detection using hash-based scanning techniques. The app compares file signatures against known malicious hashes to identify threats and provides basic device protection features.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Kotlin</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Hash-Based Detection</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Android Security APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calosync Health -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Calosync.png" alt="Calosync Health" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Calosync Health</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Cross-platform calorie and health tracking application designed to help users lose or gain weight. Features include calorie logging, recipe tracking, progress monitoring, and AI-powered tools such as a chatbot assistant for guidance and food logging.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Flutter</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Kotlin</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">AI Assistance</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Nutrition Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Children's Story Books -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Children Book App.png" alt="Children's Story Books" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Children's Story Books</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Interactive children’s book application that allows young users to read digital storybooks, color characters, and engage with creative learning activities designed for early childhood development.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Flutter</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Custom UI</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Interactive Media</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coin Kids Finance -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Coin Kids.png" alt="Coin Kids Finance" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Coin Kids Finance</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Flutter-based financial literacy app for kids, available on both Android and iOS. The app helps children save money toward goals, bookmark desired products using Amazon APIs, and track progress in a fun and educational way.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Flutter</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Firebase</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Amazon APIs</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Goal Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recover Master -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Data Recovery.png" alt="Recover Master" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Recover Master</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Android data recovery application designed to restore lost files such as photos, videos, and documents from Android devices by scanning storage and identifying recoverable data.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Kotlin</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Android Storage APIs</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">File Recovery Algorithms</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Downloader -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Downloader.png" alt="Video Downloader" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Video Downloader</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Lightweight and easy-to-use video downloader that enables users to quickly download media content with a simple interface and fast processing.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Android SDK</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Kotlin</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Face Animate AI -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Face Animate.png" alt="Face Animate AI" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Face Animate AI</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Creative entertainment app that animates static images by applying facial motion and dance animations synchronized with music, allowing users to create fun and expressive animated content.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Python</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Computer Vision</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Animation Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anti Theft -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/FG.png" alt="Anti Theft" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Anti Theft</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Android productivity application that helps users stay focused by blocking distractions and tracking app usage to promote better digital wellbeing and time management.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Kotlin</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Usage Stats API</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">WorkManager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privify VPN -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Privify.png" alt="Privify VPN" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Privify VPN</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Secure file vault application that allows users to protect sensitive files, photos, and documents using strong encryption and authentication mechanisms.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Encryption</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Biometric Authentication</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Secure Storage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privify VPN Lite -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Prvify vpn lite.png" alt="Privify VPN Lite" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Privify VPN Lite</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Cross-platform VPN application for Android and iOS built using OpenVPN, focusing on secure and private internet access. Backend infrastructure was managed using DevOps practices for scalability and reliability.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">OpenVPN</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">DevOps</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Android</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">iOS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Screen Cast -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/ScreenCast.jpeg" alt="Screen Cast" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Screen Cast</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Powerful screen casting application for Android that enables users to stream and cast their device screen to various devices such as TVs, web browsers, and media players seamlessly.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Kotlin</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Cast SDK</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Network Protocols</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Time Warp -->
+                <div class="group flex flex-col gap-10">
+                    <div class="relative w-full aspect-[3/1] rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-[#e7ebf3] dark:border-white/10 shadow-2xl bg-primary flex items-center justify-center">
+                        <img src="resources/portfolio/Time Warp.png" alt="Time Warp" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 z-10" loading="lazy">
+                    </div>
+                    <div class="grid lg:grid-cols-12 gap-8 items-start px-4">
+                        <div class="lg:col-span-8 flex flex-col gap-4">
+                            <h3 class="text-3xl md:text-6xl font-black text-[#0d121b] dark:text-white tracking-tighter group-hover:text-primary transition-colors">Time Warp</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-lg md:text-2xl leading-relaxed font-medium">Advanced image and video editing application featuring creative tools such as time warp effects, face swapping, background replacement, and sky replacement for visually engaging content creation.</p>
+                        </div>
+                        <div class="lg:col-span-4 flex flex-col gap-4 lg:items-end">
+                            <span class="text-[10px] font-black uppercase tracking-[0.3em] text-[#97A699]">Tech Stack</span>
+                            <div class="flex flex-wrap gap-2 lg:justify-end">
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Video Processing</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Image Manipulation</span>
+                                <span class="px-4 py-2 rounded-xl bg-white dark:bg-white/5 text-[11px] font-bold border border-[#e7ebf3] dark:border-white/10">Mobile Media SDKs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Inquiry CTA -->
+        <section class="mt-32 px-6 lg:px-20">
+            <div class="max-w-[1280px] mx-auto bg-primary rounded-[3rem] p-12 md:p-24 text-center flex flex-col items-center gap-8 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"></div>
+                <h2 class="text-4xl md:text-6xl font-black text-white tracking-tight z-10">Let's build something epic.</h2>
+                <p class="text-white/80 text-xl md:text-2xl max-w-2xl font-medium z-10">Whether you're starting from scratch or scaling an existing product, we have the expertise to make it happen.</p>
+                <a href="contact.html" class="z-10 px-10 py-5 bg-white text-primary rounded-2xl font-black text-lg shadow-xl hover:scale-105 transition-all">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Standardized) -->
+    <footer class="bg-white dark:bg-[#0b0f1a] border-t border-[#e7ebf3] dark:border-white/5 px-6 lg:px-20 py-20">
+        <div class="max-w-[1280px] mx-auto text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center justify-center md:justify-start gap-3">
+                        <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                        <h2 class="text-[#0d121b] dark:text-white text-xl font-bold">QuantumGrove</h2>
+                    </div>
+                    <p class="text-[#97A699] dark:text-gray-400 text-sm leading-relaxed">
+                        Leading the evolution of digital infrastructure through modern app development and intelligent AI solutions.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Quick Links</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="index.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="portfolio.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="about.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Legal</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="privacy.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-[#97A699] dark:text-gray-400 text-xs text-center border-t border-gray-100 dark:border-white/5 pt-8">
+                © 2026 QuantumGrove Technologies. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-[#1a202c] shadow-2xl border border-[#e7ebf3] dark:border-white/10 text-primary hover:scale-110 transition-all active:scale-95">
+        <span class="material-symbols-outlined !text-3xl dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined !text-3xl hidden dark:block">light_mode</span>
+    </button>
+</body>
+</html>

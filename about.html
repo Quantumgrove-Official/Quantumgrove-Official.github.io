@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | QuantumGrove</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0f8a5f",
+                        "accent-secondary": "#0d7a54",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="icon" type="image/svg+xml" href="resources/logo.svg" />
+    <script src="scripts/main.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white transition-colors duration-300 font-sans">
+    
+    <!-- Navbar -->
+    <header id="navbar" class="fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] top-0 w-full border-b border-transparent bg-white/80 dark:bg-[#0b0f1a]/80 backdrop-blur-sm py-5">
+        <div class="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-6 md:px-10 lg:px-12">
+            <a href="index.html" class="flex items-center gap-4 text-primary transition-opacity hover:opacity-80">
+                <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                <h2 class="hidden md:block text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                    QuantumGrove
+                </h2>
+            </a>
+
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-9">
+                    <a href="index.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">Home</a>
+                    <a href="portfolio.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">Portfolio</a>
+                    <a href="about.html" class="text-sm transition-colors text-primary font-bold">About Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html" class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-all hover:bg-opacity-90 active:scale-95 shadow-lg shadow-primary/20">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="mobile-menu-btn" class="p-2 text-[#0d121b] dark:text-white hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined !text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white dark:bg-[#1a202c] border-b border-[#e7ebf3] dark:border-white/5 shadow-xl overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="flex flex-col p-6 gap-6">
+                <nav class="flex flex-col gap-4">
+                    <a href="index.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">Home</a>
+                    <a href="portfolio.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">Portfolio</a>
+                    <a href="about.html" class="text-lg font-bold text-primary">About Us</a>
+                </nav>
+                <hr class="border-gray-100 dark:border-white/5" />
+                <a href="contact.html" class="w-full flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-[100px] flex flex-col">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-white dark:bg-background-dark">
+            <div class="mx-auto max-w-[1280px] px-6 py-16 lg:px-20 lg:py-24">
+                <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+                    <div class="flex flex-col gap-8">
+                        <div class="flex flex-col gap-4">
+                            <span class="text-sm font-bold uppercase tracking-widest text-primary">Our Story</span>
+                            <h1 class="text-5xl font-black leading-[1.1] tracking-tight text-[#0d121b] dark:text-white lg:text-6xl">
+                                Powering Digital Evolution Through Code.
+                            </h1>
+                            <p class="max-w-[540px] text-lg leading-relaxed text-[#97A699] dark:text-gray-400">
+                                QuantumGrove Technologies specializes in high-end coding, DevOps, and AI solutions to drive your digital growth in an ever-evolving technological landscape.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#mission" class="rounded-lg bg-primary px-8 py-4 text-base font-bold text-white shadow-xl shadow-primary/30 transition-all hover:scale-105">
+                                Explore Our Mission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative h-[400px] w-full lg:h-[500px] flex items-center justify-center">
+                        <div class="relative h-full w-full overflow-hidden rounded-2xl bg-[#0d121b] flex items-center justify-center shadow-2xl border border-white/5">
+                            <!-- Background Grid -->
+                            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 2px 2px, #0f8a5f 1px, transparent 0); background-size: 32px 32px;"></div>
+
+                            <!-- Animated Blobs -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
+                                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-[80px] animate-blob"></div>
+                                <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-secondary/20 rounded-full blur-[80px] animate-blob" style="animation-delay: 2s;"></div>
+                                <div class="absolute top-1/2 right-1/3 w-48 h-48 bg-primary/10 rounded-full blur-[60px] animate-blob" style="animation-delay: 4s;"></div>
+                            </div>
+
+                            <!-- Quantum Nodes and Connections -->
+                            <svg class="relative z-10 w-full h-full" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#0f8a5f" stop-opacity="0" />
+                                        <stop offset="50%" stop-color="#0f8a5f" stop-opacity="0.5" />
+                                        <stop offset="100%" stop-color="#0f8a5f" stop-opacity="0" />
+                                    </linearGradient>
+                                    <filter id="glow">
+                                        <feGaussianBlur stdDeviation="2.5" result="coloredBlur" />
+                                        <feMerge>
+                                            <feMergeNode in="coloredBlur" />
+                                            <feMergeNode in="SourceGraphic" />
+                                        </feMerge>
+                                    </filter>
+                                </defs>
+
+                                <!-- Connection Lines -->
+                                <g stroke="url(#lineGradient)" stroke-width="1">
+                                    <line x1="100" y1="100" x2="300" y2="100">
+                                        <animate attributeName="stroke-dasharray" from="0, 200" to="200, 0" dur="3s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="300" y1="100" x2="300" y2="300">
+                                        <animate attributeName="stroke-dasharray" from="0, 200" to="200, 0" dur="4s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="300" y1="300" x2="100" y2="300">
+                                        <animate attributeName="stroke-dasharray" from="0, 200" to="200, 0" dur="3s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="100" y1="300" x2="100" y2="100">
+                                        <animate attributeName="stroke-dasharray" from="0, 200" to="200, 0" dur="4s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="100" y1="100" x2="300" y2="300">
+                                        <animate attributeName="stroke-dasharray" from="0, 300" to="300, 0" dur="5s" repeatCount="indefinite" />
+                                    </line>
+                                    <line x1="300" y1="100" x2="100" y2="300">
+                                        <animate attributeName="stroke-dasharray" from="0, 300" to="300, 0" dur="5s" repeatCount="indefinite" />
+                                    </line>
+                                </g>
+
+                                <!-- Nodes -->
+                                <circle cx="100" cy="100" r="4" fill="#0f8a5f" filter="url(#glow)">
+                                    <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="300" cy="100" r="4" fill="#0f8a5f" filter="url(#glow)">
+                                    <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="300" cy="300" r="4" fill="#0f8a5f" filter="url(#glow)">
+                                    <animate attributeName="r" values="4;6;4" dur="3s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="100" cy="300" r="4" fill="#0f8a5f" filter="url(#glow)">
+                                    <animate attributeName="r" values="4;6;4" dur="2.2s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="200" cy="200" r="8" fill="#0f8a5f" filter="url(#glow)">
+                                    <animate attributeName="r" values="8;12;8" dur="4s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite" />
+                                </circle>
+
+                                <!-- Floating Particles -->
+                                <circle cx="50" cy="50" r="2" fill="#0f8a5f">
+                                    <animate attributeName="cy" values="50;150;50" dur="15s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0;0.5;0" dur="8s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="350" cy="250" r="3" fill="#0f8a5f">
+                                    <animate attributeName="cy" values="250;100;250" dur="20s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0;0.4;0" dur="10s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="150" cy="350" r="1.5" fill="#0f8a5f">
+                                    <animate attributeName="cy" values="350;200;350" dur="12s" repeatCount="indefinite" />
+                                    <animate attributeName="opacity" values="0;0.6;0" dur="7s" repeatCount="indefinite" />
+                                </circle>
+                            </svg>
+
+                            <!-- Overlay Text/Gradient -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#0d121b] via-transparent to-transparent opacity-60"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-white dark:bg-[#0d121b] py-12 transition-colors border-y border-gray-100 dark:border-white/5">
+            <div class="mx-auto max-w-[1280px] px-6 lg:px-20">
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+                    <div class="flex flex-col items-center gap-2 border-r border-gray-200 dark:border-white/10 last:border-0 md:items-start">
+                        <p class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Years Experience</p>
+                        <p class="text-4xl font-black tracking-tight text-primary">2.5+</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 border-r border-gray-200 dark:border-white/10 last:border-0 md:items-start">
+                        <p class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Projects Delivered</p>
+                        <p class="text-4xl font-black tracking-tight text-primary">40+</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 border-r border-gray-200 dark:border-white/10 last:border-0 md:items-start">
+                        <p class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Dedicated Specialists</p>
+                        <p class="text-4xl font-black tracking-tight text-primary">10+</p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 last:border-0 md:items-start">
+                        <p class="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Client Retention</p>
+                        <p class="text-4xl font-black tracking-tight text-primary">100%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section id="mission" class="bg-background-light dark:bg-background-dark py-20">
+            <div class="mx-auto max-w-[1280px] px-6 lg:px-20">
+                <div class="mb-16 max-w-[720px]">
+                    <h2 class="text-4xl font-black tracking-tight text-[#0d121b] dark:text-white">Our Mission & Vision</h2>
+                    <div class="mt-4 h-1.5 w-20 rounded-full bg-primary"></div>
+                    <p class="mt-6 text-lg text-[#97A699] dark:text-gray-400 leading-relaxed">
+                        We strive to be the bridge between complex technology and human-centric digital growth, ensuring our clients stay ahead in the age of intelligence.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                    <div class="group flex flex-col gap-6 rounded-xl border border-[#cfd7e7] dark:border-white/10 bg-white dark:bg-background-dark p-8 transition-all hover:shadow-xl hover:-translate-y-1">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-2xl font-bold text-[#0d121b] dark:text-white">Innovation First</h3>
+                            <p class="leading-relaxed text-[#97A699] dark:text-gray-400">
+                                Pushing the boundaries of AI and DevOps to create future-proof solutions. We don't just follow trends; we define them through rigorous R&D.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="group flex flex-col gap-6 rounded-xl border border-[#cfd7e7] dark:border-white/10 bg-white dark:bg-background-dark p-8 transition-all hover:shadow-xl hover:-translate-y-1">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-3xl">trending_up</span>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-2xl font-bold text-[#0d121b] dark:text-white">Client-Centric Growth</h3>
+                            <p class="leading-relaxed text-[#97A699] dark:text-gray-400">
+                                Building long-term partnerships through transparent and scalable technology. Your business goals are the blueprint for our engineering.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="bg-white dark:bg-background-dark py-20">
+            <div class="mx-auto max-w-[1280px] px-6 lg:px-20">
+                <div class="mb-16 text-center">
+                    <h2 class="text-4xl font-black tracking-tight text-[#0d121b] dark:text-white">Our Journey</h2>
+                </div>
+                <div class="relative mx-auto max-w-[800px]">
+                    <div class="absolute left-[20px] top-0 h-full w-[2px] bg-slate-200 dark:bg-white/5 md:left-1/2"></div>
+                    <div class="space-y-12">
+                        <!-- 2023 -->
+                        <div class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center">
+                            <div class="md:w-[45%] md:text-right order-2 md:order-1 mt-2 md:mt-0">
+                                <p class="text-primary font-bold text-lg">2023</p>
+                                <h4 class="text-xl font-bold text-[#0d121b] dark:text-white">Founding QuantumGrove</h4>
+                                <p class="text-[#97A699] dark:text-gray-400 mt-2">Established with a specialized focus on building high-performance native Android applications.</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white z-10">
+                                <span class="material-symbols-outlined text-xl">pause</span>
+                            </div>
+                            <div class="md:w-[45%] order-3"></div>
+                        </div>
+                        <!-- 2024 -->
+                        <div class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center">
+                            <div class="md:w-[45%] order-3 md:order-1"></div>
+                            <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white z-10">
+                                <span class="material-symbols-outlined text-xl">rocket_launch</span>
+                            </div>
+                            <div class="md:w-[45%] pl-12 md:pl-0 order-2 mt-2 md:mt-0">
+                                <p class="text-primary font-bold text-lg">Early 2024</p>
+                                <h4 class="text-xl font-bold text-[#0d121b] dark:text-white">AI & DevOps Expansion</h4>
+                                <p class="text-[#97A699] dark:text-gray-400 mt-2">Integrated advanced DevOps pipelines and generative AI solutions to offer a comprehensive tech stack.</p>
+                            </div>
+                        </div>
+                        <!-- 2026 -->
+                        <div class="relative flex flex-col md:flex-row md:justify-between items-start md:items-center">
+                            <div class="md:w-[45%] md:text-right order-2 md:order-1 mt-2 md:mt-0">
+                                <p class="text-primary font-bold text-lg">2026</p>
+                                <h4 class="text-xl font-bold text-[#0d121b] dark:text-white">Global Reach</h4>
+                                <p class="text-[#97A699] dark:text-gray-400 mt-2">Now serving a global clientele with a diverse team of specialists delivering world-class software.</p>
+                            </div>
+                            <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white z-10">
+                                <span class="material-symbols-outlined text-xl">public</span>
+                            </div>
+                            <div class="md:w-[45%] order-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="bg-background-light dark:bg-background-dark py-20">
+            <div class="mx-auto max-w-[1280px] px-6 lg:px-20">
+                <div class="mb-16 text-center">
+                    <h2 class="text-4xl font-black tracking-tight text-[#0d121b] dark:text-white">Meet the Leadership</h2>
+                    <p class="mx-auto mt-4 max-w-[600px] text-[#97A699] dark:text-gray-400">
+                        A team of visionaries, architects, and problem-solvers dedicated to your success.
+                    </p>
+                </div>
+                <div id="team-grid" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Team members will be injected or hardcoded -->
+                    <div class="group overflow-hidden rounded-xl bg-white dark:bg-background-dark border border-[#cfd7e7] dark:border-white/10 transition-all hover:shadow-2xl">
+                        <div class="h-80 w-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div class="h-full w-full bg-cover bg-center" style="background-image: url('resources/team/shayan.png')"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#0d121b] dark:text-white">Dr. Shayan Ahmad</h3>
+                            <p class="text-sm font-semibold text-primary uppercase tracking-wider">Founder & CEO</p>
+                            <p class="mt-4 text-sm text-[#97A699] dark:text-gray-400 leading-relaxed">
+                                A Doctor of Medical Science and the visionary leader of QuantumGrove, Dr. Shayan bridges the gap between medical expertise and technological innovation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="group overflow-hidden rounded-xl bg-white dark:bg-background-dark border border-[#cfd7e7] dark:border-white/10 transition-all hover:shadow-2xl">
+                        <div class="h-80 w-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div class="h-full w-full bg-cover bg-center" style="background-image: url('resources/team/yasir_1.png')"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#0d121b] dark:text-white">Marcus Thorne</h3>
+                            <p class="text-sm font-semibold text-primary uppercase tracking-wider">Director of Cloud Operations</p>
+                            <p class="mt-4 text-sm text-[#97A699] dark:text-gray-400 leading-relaxed">
+                                Marcus ensures 99.9% uptime for our global partners through robust DevOps frameworks and automated systems.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="group overflow-hidden rounded-xl bg-white dark:bg-background-dark border border-[#cfd7e7] dark:border-white/10 transition-all hover:shadow-2xl">
+                        <div class="h-80 w-full overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+                            <div class="h-full w-full bg-cover bg-center" style="background-image: url('resources/team/talha.png')"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-[#0d121b] dark:text-white">Talha Shah</h3>
+                            <p class="text-sm font-semibold text-primary uppercase tracking-wider">Director of Strategy & Marketing</p>
+                            <p class="mt-4 text-sm text-[#97A699] dark:text-gray-400 leading-relaxed">
+                                Talha drives our market presence and strategic growth, specializing in identifying user needs and positioning our applications as industry leaders.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-primary py-16">
+            <div class="mx-auto max-w-[1280px] px-6 text-center lg:px-20">
+                <h2 class="text-3xl font-black text-white md:text-4xl">Ready to Start Your Digital Evolution?</h2>
+                <p class="mt-4 text-lg text-white/80">Join 40+ companies that have transformed their business with QuantumGrove.</p>
+                <div class="mt-10 flex flex-wrap justify-center gap-4">
+                    <a href="contact.html" class="rounded-lg bg-white px-8 py-4 text-base font-bold text-primary shadow-2xl transition-all hover:scale-105">
+                        Contact Our Experts
+                    </a>
+                    <a href="index.html" class="rounded-lg border border-white/30 bg-transparent px-8 py-4 text-base font-bold text-white hover:bg-white/10 transition-all">
+                        View Our Services
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Standardized) -->
+    <footer class="bg-white dark:bg-[#0b0f1a] border-t border-[#e7ebf3] dark:border-white/5 px-6 lg:px-20 py-20">
+        <div class="max-w-[1280px] mx-auto text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center justify-center md:justify-start gap-3">
+                        <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                        <h2 class="text-[#0d121b] dark:text-white text-xl font-bold">QuantumGrove</h2>
+                    </div>
+                    <p class="text-[#97A699] dark:text-gray-400 text-sm leading-relaxed">
+                        Leading the evolution of digital infrastructure through modern app development and intelligent AI solutions.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Quick Links</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="index.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="portfolio.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="about.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Legal</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="privacy.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-[#97A699] dark:text-gray-400 text-xs text-center border-t border-gray-100 dark:border-white/5 pt-8">
+                © 2026 QuantumGrove Technologies. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-[#1a202c] shadow-2xl border border-[#e7ebf3] dark:border-white/10 text-primary hover:scale-110 transition-all active:scale-95">
+        <span class="material-symbols-outlined !text-3xl dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined !text-3xl hidden dark:block">light_mode</span>
+    </button>
+</body>
+</html>

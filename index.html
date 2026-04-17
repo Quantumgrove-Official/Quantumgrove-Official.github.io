@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumGrove | Modern IT Services & AI Solutions</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0f8a5f",
+                        "accent-secondary": "#0d7a54",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    animation: {
+                        marquee: 'marquee 40s linear infinite',
+                        blob: 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer components {
+            .glass {
+                @apply backdrop-blur-[12px] bg-white/80 dark:bg-[#101622]/80;
+            }
+        }
+    </style>
+
+    <link rel="icon" type="image/svg+xml" href="resources/logo.svg" />
+    <script src="scripts/main.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white transition-colors duration-300 font-sans">
+    
+    <!-- Navbar -->
+    <header id="navbar" class="fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] top-0 w-full border-b border-transparent bg-white/80 dark:bg-[#0b0f1a]/80 backdrop-blur-sm py-5">
+        <div class="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-6 md:px-10 lg:px-12">
+            <a href="index.html" class="flex items-center gap-4 text-primary transition-opacity hover:opacity-80">
+                <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                <h2 class="hidden md:block text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                    QuantumGrove
+                </h2>
+            </a>
+
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-9">
+                    <a href="index.html" class="text-sm transition-colors text-primary font-bold">Home</a>
+                    <a href="portfolio.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">Portfolio</a>
+                    <a href="about.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">About Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html" class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-all hover:bg-opacity-90 active:scale-95 shadow-lg shadow-primary/20">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="mobile-menu-btn" class="p-2 text-[#0d121b] dark:text-white hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined !text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white dark:bg-[#1a202c] border-b border-[#e7ebf3] dark:border-white/5 shadow-xl overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="flex flex-col p-6 gap-6">
+                <nav class="flex flex-col gap-4">
+                    <a href="index.html" class="text-lg font-bold text-primary">Home</a>
+                    <a href="portfolio.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">Portfolio</a>
+                    <a href="about.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">About Us</a>
+                </nav>
+                <hr class="border-gray-100 dark:border-white/5" />
+                <a href="contact.html" class="w-full flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-[100px] flex flex-col">
+        <!-- Hero Section -->
+        <section class="relative px-6 lg:px-20 py-16 lg:py-32 overflow-hidden">
+            <div class="max-w-[1280px] mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="flex flex-col gap-8 text-left z-10">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider w-fit">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            Next-Gen IT Partner
+                        </div>
+                        <h1 class="text-[#0d121b] dark:text-white text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+                            Crafting <span class="text-primary">Smart Software</span> for a Digital World
+                        </h1>
+                        <p class="text-lg text-[#97A699] dark:text-gray-400 max-w-lg leading-relaxed">
+                            From concept to deployment, we turn ideas into intelligent, user-centric digital products.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="contact.html" class="flex min-w-[160px] items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-base font-bold hover:translate-y-[-2px] transition-all shadow-xl shadow-primary/25">
+                                Start Your Project
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Constellation Hero -->
+                    <div class="relative hidden lg:block h-[500px] z-10">
+                        <div class="relative w-full h-full min-h-[400px] overflow-hidden rounded-2xl bg-[#0d121b]/5 dark:bg-white/5 shadow-2xl border border-white/5">
+                            <div class="absolute inset-0 pointer-events-none opacity-30">
+                                <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/20 rounded-full blur-[80px] animate-pulse"></div>
+                                <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-accent-secondary/20 rounded-full blur-[80px] animate-pulse"></div>
+                            </div>
+                            <canvas id="hero-canvas" class="relative z-10 w-full h-full"></canvas>
+                            <div class="absolute inset-0 z-20 pointer-events-none bg-gradient-to-tr from-primary/5 to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Marquee -->
+        <section class="border-y border-[#e7ebf3] dark:border-white/5 bg-white/30 dark:bg-white/5 py-12 overflow-hidden w-full">
+            <h4 class="text-[#97A699] text-[10px] font-bold tracking-[0.3em] uppercase text-center mb-10 opacity-60">
+                Our Technology Stack
+            </h4>
+            <div class="relative flex items-center overflow-hidden">
+                <!-- Inner container with the animation -->
+                <div class="animate-marquee whitespace-nowrap py-4 flex w-max">
+                    <!-- Original Items -->
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-orange-500">cloud</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">AWS</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-blue-500">filter_drama</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Google Cloud</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-blue-400">rebase_edit</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">React</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-primary">javascript</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Node.js</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-purple-500">code</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Kotlin</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-cyan-500">hub</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Web3</span>
+                    </div>
+
+                    <!-- Duplicated Items for seamless loop -->
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-orange-500">cloud</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">AWS</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-blue-500">filter_drama</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Google Cloud</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-blue-400">rebase_edit</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">React</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-primary">javascript</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Node.js</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-purple-500">code</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Kotlin</span>
+                    </div>
+                    <div class="flex items-center gap-10 px-10 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                        <span class="material-symbols-outlined !text-3xl text-cyan-500">hub</span>
+                        <span class="font-extrabold text-sm tracking-widest text-[#0d121b] dark:text-gray-300 uppercase">Web3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise -->
+        <section class="px-6 lg:px-20 py-24">
+            <div class="max-w-[1280px] mx-auto flex flex-col gap-16">
+                <div class="flex flex-col gap-4 text-center items-center">
+                    <h2 class="text-[#0d121b] dark:text-white text-3xl lg:text-5xl font-black tracking-tight max-w-2xl">
+                        Our Core Expertise
+                    </h2>
+                    <p class="text-[#97A699] dark:text-gray-400 text-lg max-w-xl">
+                        We deliver sophisticated technology solutions that drive tangible business value and operational excellence.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="group flex flex-col gap-6 rounded-2xl border border-[#cfd7e7] dark:border-white/10 bg-white dark:bg-background-dark p-8 hover:border-primary transition-all hover:shadow-2xl">
+                        <div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined !text-3xl">terminal</span>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-[#0d121b] dark:text-white text-xl font-bold">Custom Software</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-sm leading-relaxed">High-performance web and mobile solutions tailored to solve your specific business challenges.</p>
+                        </div>
+                    </div>
+                    <div class="group flex flex-col gap-6 rounded-2xl border border-[#cfd7e7] dark:border-white/10 bg-white dark:bg-background-dark p-8 hover:border-primary transition-all hover:shadow-2xl">
+                        <div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined !text-3xl">cloud_done</span>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-[#0d121b] dark:text-white text-xl font-bold">Cloud & DevOps</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-sm leading-relaxed">Scalable cloud-native infrastructure and automated CI/CD pipelines to ensure continuous delivery.</p>
+                        </div>
+                    </div>
+                    <div class="group flex flex-col gap-6 rounded-2xl border border-[#cfd7e7] dark:border-white/10 bg-white dark:bg-background-dark p-8 hover:border-primary transition-all hover:shadow-2xl">
+                        <div class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined !text-3xl">psychology</span>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-[#0d121b] dark:text-white text-xl font-bold">AI & Intelligence</h3>
+                            <p class="text-[#97A699] dark:text-gray-400 text-sm leading-relaxed">Leverage machine learning and predictive analytics to automate decision-making.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA -->
+        <section class="px-6 lg:px-20 mb-24">
+            <div class="relative isolate overflow-hidden bg-[#0b0f1a] rounded-[2.5rem] px-6 py-24 text-center shadow-2xl sm:px-16 lg:px-24">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 w-full h-full overflow-hidden pointer-events-none">
+                    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/40 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-blob"></div>
+                    <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-teal-500/40 rounded-full mix-blend-screen filter blur-[100px] opacity-60 animate-blob"></div>
+                </div>
+                <h2 class="mx-auto max-w-2xl text-3xl font-black text-white sm:text-5xl">Let's build the future together.</h2>
+                <p class="mx-auto mt-6 max-w-xl text-lg text-gray-300">Partner with QuantumGrove and join hundreds of companies transforming their industries with cutting-edge tech.</p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                    <a href="contact.html" class="rounded-xl bg-primary text-white px-8 py-4 text-lg font-bold shadow-lg hover:scale-105 transition-all">Talk to an Expert</a>
+                    <a href="about.html" class="text-sm font-semibold text-white hover:text-gray-300 flex items-center gap-1">Learn more <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#0b0f1a] border-t border-[#e7ebf3] dark:border-white/5 px-6 lg:px-20 py-20">
+        <div class="max-w-[1280px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                        <h2 class="text-[#0d121b] dark:text-white text-xl font-bold">QuantumGrove</h2>
+                    </div>
+                    <p class="text-[#97A699] dark:text-gray-400 text-sm leading-relaxed">
+                        Leading the evolution of digital infrastructure through modern app development and intelligent AI solutions.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Services</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><span class="text-[#97A699] dark:text-gray-400 text-sm">Cloud Architecture</span></li>
+                        <li><span class="text-[#97A699] dark:text-gray-400 text-sm">AI & Machine Learning</span></li>
+                        <li><span class="text-[#97A699] dark:text-gray-400 text-sm">Featured Work</span></li>
+                        <li><span class="text-[#97A699] dark:text-gray-400 text-sm">DevOps Strategy</span></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Company</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="about.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="portfolio.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="contact.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-[#e7ebf3] dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[#97A699] dark:text-gray-400 text-xs">© 2026 QuantumGrove Technologies. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="privacy.html" class="text-[#97A699] dark:text-gray-400 text-xs hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="text-[#97A699] dark:text-gray-400 text-xs hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Widget -->
+    <button id="theme-toggle" class="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-[#1a202c] shadow-2xl border border-[#e7ebf3] dark:border-white/10 text-primary hover:scale-110 transition-all active:scale-95">
+        <span class="material-symbols-outlined !text-3xl dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined !text-3xl hidden dark:block">light_mode</span>
+    </button>
+
+    <script>
+        initConstellation('hero-canvas');
+    </script>
+</body>
+</html>

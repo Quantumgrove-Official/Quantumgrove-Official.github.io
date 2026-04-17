@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | QuantumGrove</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0f8a5f",
+                        "accent-secondary": "#0d7a54",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="icon" type="image/svg+xml" href="resources/logo.svg" />
+    <script src="scripts/main.js"></script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-white transition-colors duration-300 font-sans">
+    
+    <!-- Navbar -->
+    <header id="navbar" class="fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] top-0 w-full border-b border-transparent bg-white/80 dark:bg-[#0b0f1a]/80 backdrop-blur-sm py-5">
+        <div class="mx-auto flex h-full w-full max-w-[1280px] items-center justify-between px-6 md:px-10 lg:px-12">
+            <a href="index.html" class="flex items-center gap-4 text-primary transition-opacity hover:opacity-80">
+                <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                <h2 class="hidden md:block text-[#0d121b] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+                    QuantumGrove
+                </h2>
+            </a>
+
+            <div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+                <nav class="flex items-center gap-9">
+                    <a href="index.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">Home</a>
+                    <a href="portfolio.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">Portfolio</a>
+                    <a href="about.html" class="text-sm font-medium transition-colors text-[#97A699] dark:text-gray-300 hover:text-primary">About Us</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <a href="contact.html" class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-white text-sm font-bold transition-all hover:bg-opacity-90 active:scale-95 shadow-lg shadow-primary/20">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 md:hidden">
+                <button id="mobile-menu-btn" class="p-2 text-[#0d121b] dark:text-white hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined !text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full bg-white dark:bg-[#1a202c] border-b border-[#e7ebf3] dark:border-white/5 shadow-xl overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+            <div class="flex flex-col p-6 gap-6">
+                <nav class="flex flex-col gap-4">
+                    <a href="index.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">Home</a>
+                    <a href="portfolio.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">Portfolio</a>
+                    <a href="about.html" class="text-lg font-medium text-[#97A699] dark:text-gray-300">About Us</a>
+                </nav>
+                <hr class="border-gray-100 dark:border-white/5" />
+                <a href="contact.html" class="w-full flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold shadow-lg shadow-primary/20">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-[100px] flex-1 flex justify-center py-12 px-6 md:px-10 lg:px-40 bg-background-light dark:bg-background-dark">
+        <div class="max-w-[1200px] w-full flex flex-col gap-10">
+            
+            <!-- Page Heading -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="flex flex-col gap-3 max-w-2xl">
+                    <h1 class="text-[#0d121b] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                        Your Vision. Our Expertise. <span class="text-primary">Real Outcomes.</span>
+                    </h1>
+                    <p class="text-[#97A699] dark:text-gray-400 text-xl font-medium leading-relaxed">
+                        Bringing your vision to life. Because every great idea deserves world-class execution.
+                    </p>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full border border-primary/20">
+                    <span class="material-symbols-outlined text-sm">schedule</span>
+                    <span class="text-sm font-bold">Avg. response: 24 hours</span>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Form -->
+                <div class="lg:col-span-7 bg-white dark:bg-[#1a202c] p-8 md:p-10 rounded-xl shadow-sm border border-[#e7ebf3] dark:border-[#2d3748]">
+                    <h3 class="text-xl font-bold mb-6 text-[#0d121b] dark:text-white">Start a Conversation</h3>
+                    
+                    <!-- Form directly submitting to Google Forms -->
+                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCc9ydluJOUXl8fmUHW7qZzbNxz_FgOYPdZvsBrMjor-Itzg/formResponse" method="POST" target="hidden_iframe" onsubmit="document.getElementById('form-success').classList.remove('hidden'); this.classList.add('hidden');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="flex flex-col gap-2">
+                                <span class="text-[#0d121b] dark:text-gray-200 text-sm font-semibold">Full Name</span>
+                                <input name="entry.1155647467" required class="flex w-full rounded-lg text-[#0d121b] dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary border border-[#cfd7e7] dark:border-[#2d3748] bg-[#f8f9fc] dark:bg-[#101622] h-12 px-4" placeholder="John Doe" type="text">
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <span class="text-[#0d121b] dark:text-gray-200 text-sm font-semibold">Business Email</span>
+                                <input name="emailAddress" required class="flex w-full rounded-lg text-[#0d121b] dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary border border-[#cfd7e7] dark:border-[#2d3748] bg-[#f8f9fc] dark:bg-[#101622] h-12 px-4" placeholder="john@company.com" type="email">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-2 mb-6">
+                            <span class="text-[#0d121b] dark:text-gray-200 text-sm font-semibold">Company Name</span>
+                            <input name="entry.2100383674" class="flex w-full rounded-lg text-[#0d121b] dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary border border-[#cfd7e7] dark:border-[#2d3748] bg-[#f8f9fc] dark:bg-[#101622] h-12 px-4" placeholder="QuantumGrove Tech" type="text">
+                        </div>
+                        <div class="flex flex-col gap-2 mb-6">
+                            <span class="text-[#0d121b] dark:text-gray-200 text-sm font-semibold">Project Details</span>
+                            <textarea name="entry.2055492795" required class="flex w-full rounded-lg text-[#0d121b] dark:text-white focus:ring-2 focus:ring-primary/50 focus:border-primary border border-[#cfd7e7] dark:border-[#2d3748] bg-[#f8f9fc] dark:bg-[#101622] p-4 min-h-[150px]" placeholder="Describe your vision..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full md:w-auto min-w-[200px] h-14 bg-primary text-white rounded-lg font-bold text-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 group">
+                            <span>Send Inquiry</span>
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Form Success Message -->
+                    <div id="form-success" class="hidden flex flex-col items-center justify-center py-12 text-center">
+                        <span class="material-symbols-outlined !text-7xl text-primary mb-4">check_circle</span>
+                        <h3 class="text-2xl font-bold mb-2 text-[#0d121b] dark:text-white">Message Sent!</h3>
+                        <p class="text-[#97A699] dark:text-gray-400">Thank you for reaching out. Our team will contact you shortly.</p>
+                        <button onclick="location.reload();" class="mt-8 text-primary font-bold hover:underline">Send another message</button>
+                    </div>
+
+                    <!-- Hidden iframe for silent submission -->
+                    <iframe name="hidden_iframe" id="hidden_iframe" class="hidden"></iframe>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="lg:col-span-5 flex flex-col gap-8">
+                    <div class="bg-white dark:bg-[#1a202c] p-8 rounded-xl shadow-sm border border-[#e7ebf3] dark:border-[#2d3748]">
+                        <h3 class="text-xl font-bold mb-6 text-[#0d121b] dark:text-white">Connect Directly</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-primary/10 text-primary rounded-lg shrink-0">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm text-[#0d121b] dark:text-white">Our HQ</p>
+                                    <p class="text-[#97A699] dark:text-gray-400">Islamabad Gulberg Green,<br/>Executive Block X95, 5th Floor</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-primary/10 text-primary rounded-lg shrink-0">
+                                    <span class="material-symbols-outlined">mail</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm text-[#0d121b] dark:text-white">Email Support</p>
+                                    <p class="text-[#97A699] dark:text-gray-400">info@quantumgrove.tech</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-primary/10 text-primary rounded-lg shrink-0">
+                                    <span class="material-symbols-outlined">call</span>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm text-[#0d121b] dark:text-white">Direct Line</p>
+                                    <p class="text-[#97A699] dark:text-gray-400">+92 334 5429 189</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="relative w-full aspect-square md:aspect-video lg:aspect-auto lg:flex-1 min-h-[300px] overflow-hidden rounded-xl border border-[#e7ebf3] dark:border-[#2d3748] shadow-sm bg-slate-100">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d554.482298878693!2d73.14957797683812!3d33.60169869180427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfeda6785b7437%3A0x197f6546a87d5311!2s96%20Square%2C%20Civic%20Center!5e0!3m2!1sen!2s!4v1768998398053!5m2!1sen!2s" 
+                            class="absolute inset-0 w-full h-full grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                            style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="QuantumGrove HQ Location"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Standardized) -->
+    <footer class="bg-white dark:bg-[#0b0f1a] border-t border-[#e7ebf3] dark:border-white/5 px-6 lg:px-20 py-20">
+        <div class="max-w-[1280px] mx-auto text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center justify-center md:justify-start gap-3">
+                        <img src="resources/logo.svg" alt="QuantumGrove Logo" class="h-8 w-7" />
+                        <h2 class="text-[#0d121b] dark:text-white text-xl font-bold">QuantumGrove</h2>
+                    </div>
+                    <p class="text-[#97A699] dark:text-gray-400 text-sm leading-relaxed">
+                        Leading the evolution of digital infrastructure through modern app development and intelligent AI solutions.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Quick Links</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="index.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="portfolio.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Portfolio</a></li>
+                        <li><a href="about.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <h4 class="text-[#0d121b] dark:text-white font-bold">Legal</h4>
+                    <ul class="flex flex-col gap-3">
+                        <li><a href="privacy.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-[#97A699] dark:text-gray-400 text-sm hover:text-primary transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-[#97A699] dark:text-gray-400 text-xs text-center border-t border-gray-100 dark:border-white/5 pt-8">
+                © 2026 QuantumGrove Technologies. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-2xl bg-white dark:bg-[#1a202c] shadow-2xl border border-[#e7ebf3] dark:border-white/10 text-primary hover:scale-110 transition-all active:scale-95">
+        <span class="material-symbols-outlined !text-3xl dark:hidden">dark_mode</span>
+        <span class="material-symbols-outlined !text-3xl hidden dark:block">light_mode</span>
+    </button>
+</body>
+</html>

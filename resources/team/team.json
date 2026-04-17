@@ -1,0 +1,22 @@
+{
+  "teamMembers": [
+    {
+      "name": "Dr. Shayan Ahmad",
+      "imagePath": "/resources/team/shayan.png",
+      "title": "Founder & CEO",
+      "description": "A Doctor of Medical Science and the visionary leader of QuantumGrove, Dr. Shayan bridges the gap between medical expertise and technological innovation to drive our global mission."
+    },
+    {
+      "name": "Marcus Thorne",
+      "imagePath": "/resources/team/yasir_1.png",
+      "title": "Director of Cloud Operations",
+      "description": "Marcus ensures 99.9% uptime for our global partners through robust DevOps frameworks."
+    },
+    {
+      "name": "Talha Shah",
+      "imagePath": "/resources/team/talha.png",
+      "title": "Director of Strategy & Marketing",
+      "description": "Talha drives our market presence and strategic growth, specializing in identifying user needs and positioning our applications as industry-leading solutions."
+    }
+    ]
+    }
